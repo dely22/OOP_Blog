@@ -1,5 +1,21 @@
 <?php require('core/init.php'); ?>
+<!-- share code -->
+<?php
+//Create Topics Object
+$topic = new Topic;
+//Get ID From URL
+$topic_id = $_GET['id'];
 
+$baseUrl = "http://localhost/PHP_CHALLINGES/blog/";
+$slug = $row['articleSlug'];
+$articleIdc = $row['articleId'];
+
+// $baseUrl = "http://localhost/blog/";
+// $slug = $row['articleSlug'];
+// $articleIdc = $row['articleId'];
+
+
+?>
 <?php
 //Create Topics Object
 $topic = new Topic;

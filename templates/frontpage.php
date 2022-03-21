@@ -14,9 +14,27 @@
 								<a href="topics.php?category=<?php echo urlFormat($topic->category_id); ?>"><?php echo $topic->name; ?></a> >>
 								<a href="topics.php?user=<?php echo urlFormat($topic->user_id); ?>"><?php echo $topic->username; ?></a> >>
 								<?php echo formatDate($topic->create_date); ?>
-								<a href="#"><span class="badge pull-right"><i class="fa fa-share-alt"></i></span></a>
+
+								<!-- share btns -->
+
+								<!-- <a href="#"><span class="badge pull-right"><i class="fa fa-share-alt"></i></span></a> -->
 								<br>
-								<span class="badge pull-right"><?php echo replyCount($topic->id); ?></span>
+								<!-- <p><strong>Share </strong></p> -->
+								<ul>
+
+									<a target="_blank" class="badge pull-right" href="http://www.facebook.com/sharer.php?u=<?php echo $baseUrl . $slug; ?>">
+										<i class="fa fa-facebook-f"></i></a>
+
+									<a target="_blank" class="badge pull-right" href="http://twitter.com/share?text=Visit the link &url=<?php echo $baseUrl . $slug; ?>&hashtags=blog,technosmarter,programming,tutorials,codes,examples,language,development">
+										<i class="fa fa-twitter"></i> </a>
+
+									<a target="_blank" class="badge pull-right" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $baseUrl . $slug; ?>">
+										<i class="fa fa-linkedin"></i></a>
+
+
+								</ul>
+
+								<!-- <span class="badge pull-right"><?php echo replyCount($topic->id); ?></span> -->
 							</div>
 						</div>
 					</div>
